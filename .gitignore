@@ -1,2 +1,9 @@
 .sass-cache/
 *.css.map
+.idea
+*.iml
+out
+gen
+.gitignore
+.idea/
+css
