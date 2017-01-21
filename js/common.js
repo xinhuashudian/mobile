@@ -29,4 +29,16 @@ $(function(){
     $(window).resize(function(){
         iniDocSize();
     });
+
+
+
+    $('.my-check-box .icon').click(function () {
+        var input = $(this).siblings('.hide-input');
+        input.click();
+        if(input[0].checked){
+            $(this).addClass('checked');
+        }else{
+            $(this).removeClass('checked');
+        }
+    })
 });

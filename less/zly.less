@@ -1,3 +1,29 @@
+.action-bar-wrap{
+    .action-bar{
+        .right{
+            position: relative;
+            .add-addr{
+                width: 90px;
+                display: block;
+                position: absolute;
+                color: #999;
+                height: 48px;
+                right: 0px;
+                top: 0px;
+                text-align: center;
+                font-size: 14px;
+            }
+            .search{
+                display: block;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+    }
+}
 .return-shipping-order{
     width: 10rem;
     .form-row{
@@ -46,5 +72,157 @@
     }
     .submit-row{
         margin-top: 360px;
+    }
+}
+
+.addr-item{
+    width: 10rem;
+    background: #F1F2F6;
+    padding-bottom: 1px;
+    .addr-box{
+        background: #FFF;
+        margin-bottom: 12px;
+        height: 100px;
+        .check{
+            margin-top: 15px;
+            height: 70px;
+            float: left;
+            width: 1.2rem;
+            .my-check-box{
+                margin: 23px auto 0px;
+            }
+        }
+        .detail{
+            margin-top: 15px;
+            height: 70px;
+            width: 7.3rem;
+            float: left;
+            .user{
+                height: 28px;
+                line-height: 28px;
+                margin-top: 8px;
+                span{
+                    margin-right: 32px;
+                    font-size: 14px;
+                }
+            }
+            .addr-text{
+                color: #999;
+                font-size: 12px;
+                height: 28px;
+                line-height: 28px;
+            }
+        }
+        .to-detail{
+            height: 100px;
+            line-height: 100px;
+            width: 1.5rem;
+            float: left;
+            text-align: right;
+            padding-right: 12px;
+            font-size: 22px;
+        }
+    }
+}
+
+.order-tab{
+    width: 10rem;
+    height: 38px;
+    padding: 10px 0px;
+    background: #A0A0A0;
+    .tab{
+        width: 2rem;
+        text-align: center;
+        color: #F5F5F5;
+        height: 18px;
+        line-height: 18px;
+        float: left;
+        border-right: solid 1px #FFF;
+        &:last-child{
+            border-right: none;
+        }
+    }
+    .cur{
+        color: #FFF;
+    }
+}
+
+.order-item{
+    width: 10rem;
+    background: #F1F2F6;
+    padding-bottom: 1px;
+    border-bottom: solid 1px #EEE;
+    .order-box{
+        width: 10rem;
+        margin-bottom: 12px;
+        padding: 14px 0px;
+        background: #FFF;
+        border-bottom: solid 1px #EEE;
+        .order-head{
+            width: 10rem;
+            height: 34px;
+            line-height: 28px;
+            .order-num{
+                font-size: 14px;
+                float: left;
+                padding-left: 12px;
+            }
+            .status{
+                float: right;
+                color: #E54446;
+                padding-right: 12px;
+            }
+        }
+        .goods-detail{
+            .cover{
+                float: left;
+                margin-left: 12px;
+                border: solid 1px #EEE;
+                display: block;
+                width: 75px;
+                height: 75px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .goods-info{
+                margin-left: 100px;
+                padding-right: 12px;
+                .name{
+                    font-size: 14px;
+                    display: block;
+                    width: 100%;
+                    height: 22px;
+                    line-height: 22px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .price{
+                    font-size: 14px;
+                    display: block;
+                    width: 100%;
+                    height: 22px;
+                    line-height: 22px;
+                    color: #999;
+                    i{
+                        color: #E54446;
+                    }
+                }
+                .action-item{
+                    margin-top: 5px;
+                    .btn{
+                        float: right;
+                        border-radius: 4px;
+                        margin-left: 14px;
+                        opacity: 0.7;
+                        height: 26px;
+                        line-height: 22px;
+                        padding: 1px 12px;
+                    }
+                }
+            }
+        }
     }
 }
