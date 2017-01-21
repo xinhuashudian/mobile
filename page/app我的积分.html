@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>app我的积分</title>
+	<meta charset="utf-8">
+	<meta name="Keywords" content="#">
+	<meta name="description" content="#">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link href="../libs/animate.min.css" type="text/css" rel="stylesheet">
+    <link href="../libs/mobiscroll_002.css" rel="stylesheet" type="text/css">
+    <link href="../libs/mobiscroll.css" rel="stylesheet" type="text/css">
+    <link href="../libs/mobiscroll_003.css" rel="stylesheet" type="text/css">
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="http://at.alicdn.com/t/font_1t3c8q9vl0kep14i.css" type="text/css" rel="stylesheet">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body class="main-contanier">
+	<div class="content-box">
+        <!--actionbar-->
+        <div class="action-bar-wrap">
+            <div class="action-bar clearfix">
+                <div class="left">
+                    <a href="" class="back iconfont icon-jikediancanicon13-left"></a>
+                </div>
+                <div class="title">我的积分</div>
+                <div class="right">
+                    <a href="" class="search iconfont icon-sousuo"></a>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <!--内容部分-->
+        <div class="main-content">
+            <div class="order-tab clearfix">
+                <a href="" class="tab">本日</a>
+                <a href="" class="tab">近一周</a>
+                <a href="" class="tab">近一月</a>
+                <a href="" class="tab">近三月</a>
+                <a href="" class="tab cur">近半年</a>
+            </div>
+            <div class="filter-box clearfix">
+                <div class="filter-input">
+                    <div class="row clearfix">
+                        <label>起始时间</label>
+                        <input type="text" class="time" id="startDate"  value="2015-05-25">
+                    </div>
+                    <div class="row clearfix">
+                        <label>截止时间</label>
+                        <input type="text" class="time" id="endDate"  value="2015-05-25">
+                    </div>
+                </div>
+                <div class="submit clearfix">
+                    <input type="submit" value="查询" class="btn line-btn-danger">
+                </div>
+            </div>
+            <div class="cur-integral">当前积分<i>200</i></div>
+            <ul class="integral-table">
+                <li class="head item">
+                    <div class="box">方式</div>
+                    <div class="box">积分余额</div>
+                    <div class="box">积分数量</div>
+                    <div class="box">时间</div>
+                </li>
+                <li class="item">
+                    <div class="box">积分兑换</div>
+                    <div class="box">-300</div>
+                    <div class="box">200</div>
+                    <div class="box">2015-06-01</div>
+                </li>
+                <li class="item">
+                    <div class="box">购买商品</div>
+                    <div class="box">100</div>
+                    <div class="box">500</div>
+                    <div class="box">2015-06-01</div>
+                </li>
+                <li class="item">
+                    <div class="box">签到</div>
+                    <div class="box">100</div>
+                    <div class="box">500</div>
+                    <div class="box">2015-06-01</div>
+                </li>
+                <li class="item">
+                    <div class="box">积分兑换</div>
+                    <div class="box">-300</div>
+                    <div class="box">200</div>
+                    <div class="box">2015-06-01</div>
+                </li>
+                <li class="item">
+                    <div class="box">购买商品</div>
+                    <div class="box">100</div>
+                    <div class="box">500</div>
+                    <div class="box">2015-06-01</div>
+                </li>
+                <li class="item">
+                    <div class="box">签到</div>
+                    <div class="box">100</div>
+                    <div class="box">500</div>
+                    <div class="box">2015-06-01</div>
+                </li>
+                <li class="item">
+                    <div class="box">购买商品</div>
+                    <div class="box">100</div>
+                    <div class="box">500</div>
+                    <div class="box">2015-06-01</div>
+                </li>
+            </ul>
+        </div>
+        <!---->
+	</div>
+</body>
+<script src="../js/common.js"></script>
+<script src="../libs/mobiscroll_002.js" type="text/javascript"></script>
+<script src="../libs/mobiscroll_004.js" type="text/javascript"></script>
+<script src="../libs/mobiscroll.js" type="text/javascript"></script>
+<script src="../libs/mobiscroll_003.js" type="text/javascript"></script>
+<script src="../libs/mobiscroll_005.js" type="text/javascript"></script>
+<script>
+    $(function () {
+
+        var currYear = (new Date()).getFullYear();
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 1900, //开始年份
+            endYear: currYear + 2000 //结束年份
+        };
+        $("#startDate").mobiscroll($.extend(opt['date'], opt['default']));
+        $("#endDate").mobiscroll($.extend(opt['date'], opt['default']));
+        var optDateTime = $.extend(opt['datetime'], opt['default']);
+        var optTime = $.extend(opt['time'], opt['default']);
+        $("#appDateTime").mobiscroll(optDateTime).datetime(optDateTime);
+        $("#appTime").mobiscroll(optTime).time(optTime);
+        //获取当前的时间
+        function today(){
+            var today=new Date();
+            var h=today.getFullYear();
+            var m=today.getMonth()+1;
+            var d=today.getDate();
+            return h+"-"+m+"-"+d;
+        }
+        document.getElementById("startDate").value = today();
+        document.getElementById("endDate").value = today();
+    });
+</script>
+
+</html>
+	
