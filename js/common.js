@@ -33,12 +33,15 @@ $(function(){
 
 
     $('.my-check-box .icon').click(function () {
-        var input = $(this).siblings('.hide-input');
-        input.click();
-        if(input[0].checked){
-            $(this).addClass('checked');
-        }else{
-            $(this).removeClass('checked');
+        var disable = $(this).attr('data-disable');
+        if(disable != 'true') {
+            var input = $(this).siblings('.hide-input');
+            input.click();
+            if(input[0].checked){
+                $(this).addClass('checked').addClass('icon-danxuan1');
+            }else{
+                $(this).removeClass('checked').removeClass('icon-danxuan1');
+            }
         }
     })
 });
