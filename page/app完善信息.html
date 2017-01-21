@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>app退货信息</title>
+	<title>app完善信息</title>
 	<meta charset="utf-8">
 	<meta name="Keywords" content="#">
 	<meta name="description" content="#">
@@ -22,31 +22,41 @@
                 <div class="left">
                     <a href="" class="back iconfont icon-jikediancanicon13-left"></a>
                 </div>
-                <div class="title">退货运单填写</div>
+                <div class="title">完善信息</div>
                 <div class="right"></div>
             </div>
         </div>
 
         <div class="main-content">
-            <form>
-                <div class="return-shipping-order">
-                    <div class="form-row">
-                        <input type="text" class="input" placeholder="请输入运单号">
-                    </div>
-                    <div class="form-row select-form-row">
-                        <select class="select">
-                            <option value="">快递公司</option>
-                            <option value="1">韵达</option>
-                            <option value="2">申通</option>
-                            <option value="3">圆通</option>
-                            <option value="4">顺丰</option>
-                        </select>
-                    </div>
-                    <div class="form-row submit-row">
-                        <input type="submit" class="btn btn-large btn-block btn-gray" value="提交">
+            <div class="complete-user-info">
+                <div class="user-info">
+                    <div class="title">当前登陆账号</div>
+                    <div class="detail clearfix">
+                        <img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1634946363,1357829496&fm=58" class="avater">
+                        <div class="detail-info">
+                            <div class="row">
+                                用户名：liyanhong<i>(微信登陆默认账号)</i>
+                            </div>
+                            <div class="row">
+                                手机：
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </form>
+                <div class="complete-form">
+                    <div class="title">您的账号信息尚不完善，请完善手机号码：</div>
+                    <div class="form-row">
+                        <input type="text" class="input" placeholder="请输入手机号">
+                    </div>
+                    <div class="tip">
+                        温馨提示：<br>
+                        若您输入的手机号已被注册，需输入相应的登录密码进行完善。暂不支持非大陆手机号码注册或登陆
+                    </div>
+                    <div class="form-row submit-row">
+                        <input type="submit" class="btn btn-large btn-block btn-gray" value="下一步">
+                    </div>
+                </div>
+            </div>
         </div>
 	</div>
 </body>
