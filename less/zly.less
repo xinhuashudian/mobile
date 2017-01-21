@@ -146,7 +146,21 @@
         color: #FFF;
     }
 }
-
+.my-order-tab{
+    background: #F2F2F2;
+    border-top: solid 1px #E0E0E0;
+    border-bottom: solid 1px #E0E0E0;
+    .tab{
+        color: #666;
+        border-right: solid 1px #E0E0E0;
+        &:last-child{
+            border-right: none;
+        }
+    }
+    .cur{
+        color: #E54446;
+    }
+}
 .order-item{
     width: 10rem;
     background: #F1F2F6;
@@ -226,7 +240,89 @@
         }
     }
 }
-
+.my-order-item{
+    .order-box{
+        .order-head{
+            .order-num{
+                i{
+                    font-size: 18px;
+                    float: left;
+                    margin-right: 4px;
+                }
+            }
+            .status{
+            }
+        }
+        .goods-detail{
+            background: #F5F5F5;
+            padding: 6px 0px;
+            margin-bottom: 2px;
+            .cover{
+            }
+            .goods-info{
+                .name{
+                    width: 60%;
+                    float: left;
+                    height: 44px;
+                    line-height: 22px;
+                    white-space: normal;
+                }
+                .price{
+                    float: right;
+                    width: 38%;
+                    text-align: right;
+                    .now{
+                        height: 24px;
+                        line-height: 24px;
+                        display: block;
+                        color: #666;
+                    }
+                    .old{
+                        height: 24px;
+                        line-height: 24px;
+                        display: block;
+                        text-decoration: line-through;
+                    }
+                    .num{
+                        display: block;
+                        font-size: 12px;
+                    }
+                }
+                .action-item{
+                    margin-top: 5px;
+                    .btn{
+                    }
+                }
+            }
+        }
+        .bill-box{
+            padding: 8px 12px 0px;
+            .info{
+                text-align: right;
+                height: 21px;
+                line-height: 21px;
+                font-size: 14px;
+                i{
+                    font-size: 16px;
+                }
+            }
+            .action-item{
+                margin-top: 8px;
+                .btn{
+                    float: right;
+                    border-radius: 4px;
+                    margin-left: 14px;
+                    height: 26px;
+                    line-height: 22px;
+                    padding: 1px 12px;
+                }
+                .line-btn-gray{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
 .filter-box{
     width: 9.4rem;
     margin: 0px auto;
