@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <div class="main-content book-detail">
+        <div class="main-content book-detail" data-status="false">
             TechWeb今日早间报道了初创公司Starship轮式机器人测试上门送餐服务的消息。相比于美国无人机送货的研发进程，京东此前推出的无人机送货还未发展到这一步。中国要实现无人机将网购商品直接送到顾客身边这一场景，需要多久呢？京东集团CEO刘强东日前在接受媒体采访时，给出了回答——12年内。
 
             近日刘强东做客《改变世界：中国杰出企业家管理思想访谈录》，在接受知名媒体人秦朔采访时，刘强东提到了时下火热的人工智能及自动化技术可以给商业带来的改变。
@@ -116,5 +116,47 @@
 	</div>
 </body>
 <script src="../js/common.js"></script>
+<script>
+    $(function () {
+        $('.book-detail').click(function () {
+            if($(this).attr('data-status') == 'false') {
+                $('.book-action-item-wrap').addClass('book-action-item-active');
+                $('.book-detail').attr('data-status', 'true');
+            }else{
+                $('.book-action-item-wrap').removeClass('book-action-item-active');
+                $('.book-detail').attr('data-status', 'false');
+            }
+
+        });
+
+        function slide(e){
+            var touch = e.touches[0];
+            var barOffsetLeft = $(".progress-bar .all").offset().left;
+            var barLeft = touch.pageX - barOffsetLeft;
+            if(barLeft >= 0 && barLeft <= $(".progress-bar .all").width()){
+                var curPercent = barLeft / $(".progress-bar .all").width();
+                if(curPercent < 0){
+                    curPercent = 0;
+                }
+                if(curPercent > 1){
+                    curPercent = 1;
+                }
+                $(".progress-bar .dot").css({"left":100 * curPercent + "%"});
+                $(".progress-bar .cur").css({"width":100 * curPercent + "%"});
+                var value = curPercent.toFixed(2) * 100;
+                console.log(value)
+            }
+        }
+
+
+        $(".progress-bar .dot")[0].addEventListener("touchmove",function(event){
+            event.preventDefault();
+            slide(event);
+        },false);
+        $(".progress-bar .dot")[0].addEventListener("touchend",function(event){
+            event.preventDefault();
+        },false);
+    })
+</script>
 </html>
 	
