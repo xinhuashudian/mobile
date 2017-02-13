@@ -956,9 +956,12 @@
         border-left: none;
         border-right: none;
         margin-top: 10px;
+        min-height: 168px;
         .cover{
-            width: 150px;
-            height: 150px;
+            width: 3.5rem;
+            height: 3.5rem;
+            max-width: 150px;
+            max-height: 150px;
             float: left;
             img{
                 width: 100%;
@@ -968,7 +971,8 @@
         }
         .detail{
             height: 50px;
-            margin-left: 162px;
+            margin-left: 3.5rem;
+            padding-left: 12px;
             .title{
                 margin-top: 12px;
                 overflow: hidden;
@@ -1048,6 +1052,169 @@
         .btn{
             height: 46px;
             line-height: 36px;
+        }
+    }
+}
+
+.action-bar-wrap{
+    .action-bar{
+        .right{
+            .share{
+                font-size: 22px;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.active-apply-box{
+    width: 10rem;
+    .active-intro{
+        width: 10rem;
+        padding: 14px;
+        background: #FFF;
+        border-bottom: solid 1px #DDD;
+        .cover{
+            width: 3.5rem;
+            height: 3.5rem;
+            max-width: 150px;
+            max-height: 150px;
+            float: left;
+            border: solid 1px #DDD;
+        }
+        .intro{
+            margin-left: 3.5rem;
+            .name{
+                height: 32px;
+                line-height: 32px;
+                font-size: 16px;
+                margin-top: 6px;
+                margin-left: 12px;
+            }
+            .desc{
+                font-size: 14px;
+                color: #FF671C;
+                line-height: 21px;
+                height: 42px;
+                overflow: hidden;
+                margin-left: 12px;
+            }
+            .preice-line{
+                margin-left: 12px;
+                .price{
+                    margin-top: 36px;
+                    float: left;
+                    font-size: 12px;
+                    color: #FF671C;
+                    span{
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                }
+                .attention-btn{
+                    float: right;
+                    height: 32px;
+                    padding: 0px 10px;
+                    border: solid 1px #939393;
+                    margin-top: 28px;
+                    margin-right: 6px;
+                    border-radius: 5px;
+                    line-height: 32px;
+                    cursor: pointer;
+                    i{
+                        float: left;
+                        margin-right: 6px;
+                        margin-top: 1px;
+                    }
+                }
+            }
+        }
+    }
+    .buy-info-wrap{
+        width: 10rem;
+        background: #FFF;
+        .buy-info{
+            width: 100%;
+            padding: 14px 12px;
+            border-bottom: solid 1px #DDD;
+            .info{
+                width: 50%;
+                float: left;
+                height: 28px;
+                line-height: 28px;
+                label{
+                    float: left;
+                    color: #959595;
+                }
+                .content{
+                    float: left;
+                    margin-left: 14px;
+                    .star{
+                        font-size: 0.4rem;
+                        color: #FF671C;
+                    }
+                }
+            }
+        }
+    }
+    .promotion-wrap{
+        width: 10rem;
+        background: #FFF;
+        .promotion{
+            width: 100%;
+            padding: 14px 12px;
+            border-bottom: solid 1px #DDD;
+            .line{
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+                .d{
+                    width: 8rem;
+                    float: left;
+                    label{
+                        float: left;
+                        color: #959595;
+                    }
+                    .icon{
+                        display: block;
+                        float: left;
+                        background: #FF671C;
+                        color: #FFF;
+                        border-radius: 3px;
+                        margin-left: 10px;
+                        padding: 1px 4px;
+                        margin-bottom: 4px;
+                    }
+                    .tag{
+                        float: left;
+                        display: block;
+                        background: #FFE9DE;
+                        color: #FF671C;
+                        border-radius: 3px;
+                        margin-left: 10px;
+                        padding: 1px 4px;
+                        margin-bottom: 4px;
+                    }
+                }
+
+                .more{
+                    float: right;
+                    color: #DDD;
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+    .fav-set-wrap{
+        width: 10rem;
+        background: #FFF;
+        .fav-set{
+            width: 100%;
+            padding: 14px 12px;
+            border-bottom: solid 1px #DDD;
         }
     }
 }
