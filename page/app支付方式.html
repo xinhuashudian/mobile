@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>消息</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="#">
+    <meta name="description" content="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="http://at.alicdn.com/t/font_1t3c8q9vl0kep14i.css" type="text/css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body class="main-contanier">
+<div class="content-box">
+    <!--actionbar-->
+    <div class="action-bar-wrap">
+        <div class="action-bar clearfix">
+            <div class="left">
+                <a href="" class="back iconfont icon-jikediancanicon13-left"></a>
+            </div>
+            <div class="title">消息</div>
+            <div class="right">编辑</div>
+        </div>
+    </div>
+    <!---->
+    <!--内容部分-->
+    <div class="main-content zzj">
+        <div class="pay-method">
+            <ul>
+                <li>
+                    <div class="img-wrap">
+                        <img src="../images/zhifu01.jpg" alt="" width="100%">
+                    </div>
+                    <div class="text">
+                        <h3>银联支付</h3>
+                        <p>银联支付的口号</p>
+                    </div>
+                </li>
+                <li class="cur">
+                    <div class="img-wrap">
+                        <img src="../images/zhifu02.jpg" alt="" width="100%">
+                    </div>
+                    <div class="text">
+                        <h3>支付宝支付</h3>
+                        <p>支付宝支付的口号</p>
+                    </div>
+                </li>
+            </ul>
+            <div class='btn-wrap'><button class="btn">立即支付</button></div>
+        </div>
+    </div>
+    <!---->
+</div>
+</body>
+<script src="../js/common.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.pay-method li').click(function(){
+            $(this).addClass('cur').siblings().removeClass('cur')
+        })
+    })
+</script>
+</html>
