@@ -3,6 +3,34 @@
 @size-b:16px;
 @border-color:#c6c6c6;
 
+.leimu{
+  background: url("../images/leimu.png") no-repeat center;
+  background-size: 20px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.history-delete{
+  background: url(../images/delete.png) no-repeat center;
+  background-size:34px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.right-list-wrap{
+  position: fixed;
+  top:50px;
+  right: 0;
+  background: #000;
+  width: 120px;
+  padding: 10px 12px;
+  li{
+    line-height: 30px;
+    a{
+      color: #fff;
+    }
+  }
+}
 .zzj{
   font-size: @size-m;
   .color-red{
@@ -846,6 +874,244 @@
       background:#3dcb45;
       color: #fff;
       height: 40px;
+    }
+  }
+  .miaosha{
+    padding-left: 10px;
+    li{
+      margin-left: 90px;
+      position: relative;
+      padding: 10px 0;
+      height: 100px;
+      border-bottom: 1px solid #999;
+      .img-wrap{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top:10px;
+        left: -90px;
+      }
+      .timing{
+        position: absolute;
+        right: 0;
+        top:10px;
+        width: 86px;
+        bottom: 0;
+        p{
+          text-align: center;
+          color: #666;
+          font-size: 12px;
+        }
+        .time{
+          margin-top: 6px;
+          font-weight: bold;
+          span{
+            border: 1px solid #666;
+            border-radius: 3px;
+            height: 24px;
+            width: 20px;
+            font-size: 18px;
+          }
+        }
+        .btn-wrap{
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          button{
+            font-size: 12px;
+            line-height: 12px;
+          }
+        }
+      }
+      .text{
+        margin-right: 90px;
+        h3{
+          font-weight: 500;
+          font-size: @size-m;
+          color: #333;
+        }
+        p{
+          margin-top: 8px;
+          font-size: 12px;
+          color: #666;
+        }
+        .price{
+          color: #da4f49;
+          margin-top: 12px;
+          i{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .search-input{
+    margin-top: 10px;
+    padding: 0 10px;
+    height: 32px;
+    .input-wrap{
+      margin-right: 56px;
+      input{
+        width: 100%;
+        background:url("../images/search.png") no-repeat 4px;
+        background-size: 20px;
+        padding-left: 28px;
+        border-radius: 5px;
+        height: 30px;
+        border: 1px solid #999;
+      }
+    }
+    .btn-wrap{
+      width: 52px;
+      float: right;
+      .btn{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .search{
+    color: #333;
+    h3{
+      margin-top:10px;
+      text-align: center;
+      line-height: 30px;
+      font-weight: 500;
+    }
+    ul{
+      border-bottom: 1px solid #999;
+      display: inline-block;
+      width: 100%;
+    }
+    li{
+      float: left;
+      width: 25%;
+      border-right: 1px solid #999;
+      border-top: 1px solid #999;
+      line-height: 30px;
+      text-align: center;
+    }
+    li:nth-child(4n){
+      border-right:0
+    }
+  }
+  .ul-nav{
+    height:40px;
+    color: #666;
+    background: #f6f6f6;
+    border-bottom: 1px solid #999;
+    span{
+      display: inline-block;
+      width: 19%;
+      height: 30px;
+      margin-top: 5px;
+      line-height: 30px;
+      text-align: center;
+      border-right:1px solid #999;
+    }
+    span.cur{
+      background: #e8e8e8;
+      color: #333;
+      margin-top: 0;
+      border-right:0;
+      line-height: 40px;
+      height: 100%;
+    }
+  }
+  .category-filter {
+    margin-left: 10px;
+    height: 14px;
+    margin-top: 10px;
+    span{
+      font-size: 12px;
+      display: inline-block;
+      padding-right: 16px;
+      background:url("../images/sub.png") no-repeat right;
+      background-size: 14px;
+      margin-right: 34px;
+    }
+  }
+  .category{
+    padding-left: 10px;
+    li{
+      position: relative;
+      padding: 10px 0;
+      height: 150px;
+      border-bottom: 1px solid #ddd;
+      .img-wrap{
+        width: 110px;
+        height: 110px;
+        position: absolute;
+        top:20px;
+        left: 10px;
+        a{
+          display: block;
+          position: absolute;
+          bottom: 0;
+          height: 20px;
+          width: 100%;
+          background: rgba(0,0,0,0.7);
+          font-size: 10px;
+          color: #fff;
+          p{
+            text-align: right;
+            line-height: 20px;
+          }
+          span{
+            display: block;
+            position: absolute;
+            height: 20px;
+            line-height: 20px;
+            color: #999;
+            left: 6px;
+          }
+        }
+      }
+      .timing{
+        position: absolute;
+        right: 0;
+        top:20px;
+        width: 86px;
+        bottom: 0;
+        span{
+          text-align: right;
+          color: #666;
+          font-size: 12px;
+          padding-left: 20px;
+          background: url("../images/ling.png") no-repeat left;
+          background-size: 14px;
+        }
+        .cur{
+          background: url("../images/ling-hover.png") no-repeat left;
+          background-size: 14px;
+        }
+        .btn-wrap{
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          button{
+            font-size: 12px;
+            line-height: 12px;
+          }
+        }
+      }
+      .text{
+        margin-left: 130px;
+        padding-top: 10px;
+        h3{
+          font-weight: 500;
+          font-size: @size-m;
+          color: #333;
+        }
+        p{
+          font-size: 10px;
+          color: #666;
+          line-height: 18px;
+        }
+        .color-gray{
+          color: #999;
+        }
+      }
     }
   }
 }
