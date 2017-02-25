@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>附近门店地图</title>
+	<meta charset="utf-8">
+	<meta name="Keywords" content="#">
+	<meta name="description" content="#">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="http://at.alicdn.com/t/font_0lekvgzy4wh4cxr.css" type="text/css" rel="stylesheet">
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=kggQvjdF64SlGajgnxq1TaGW"></script>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body class="main-contanier">
+	<div class="content-box" style="background: #f5f5f5;">
+        <div class="action-bar-wrap">
+            <div class="action-bar clearfix">
+                <div class="left">
+                    <a href="" class="back iconfont icon-jikediancanicon13-left"></a>
+                </div>
+                <div class="title map-inut">
+                    <div class="input-wrap">
+                        <i class="iconfont icon-search"></i>
+                        <input type="text" placeholder="请输入门店/图书馆名称"></div>
+                </div>
+                <div class="right cur-location">
+                    <i class="iconfont icon-dingwei1"></i>
+                    <span>北京</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="map-wrap">
+                <div class="shop-item">
+                    <div class="shop clearfix">
+                        <div class="detail">
+                            <div class="name"><i class="iconfont icon-shuidilh"><em>1</em></i>新华书店（建筑书店）</div>
+                            <div class="addr">北京市海淀区增光路10号</div>
+                        </div>
+                        <div class="server">
+                            <span>提供服务：P</span>
+                            <span>距离：708米</span>
+                        </div>
+                    </div>
+                    <div class="shop active clearfix">
+                        <div class="detail">
+                            <div class="name"><i class="iconfont icon-shuidilh"><em>2</em></i>新华书店（建筑书店）</div>
+                            <div class="addr">北京市海淀区增光路10号</div>
+                        </div>
+                        <div class="server">
+                            <span>提供服务：P</span>
+                            <span>距离：708米</span>
+                        </div>
+                    </div>
+                    <div class="shop clearfix">
+                        <div class="detail">
+                            <div class="name"><i class="iconfont icon-shuidilh"><em>3</em></i>新华书店（建筑书店）</div>
+                            <div class="addr">北京市海淀区增光路10号</div>
+                        </div>
+                        <div class="server">
+                            <span>提供服务：P</span>
+                            <span>距离：708米</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="location" id="location"></div>
+                <script>
+                    $('.map-wrap').css({height: ($(window).height() - 50) + 'px'});
+                    var map = new BMap.Map("location");
+                    map.centerAndZoom(new BMap.Point(116.331398, 39.897445), 11);
+                    map.enableScrollWheelZoom(true);
+                    map.clearOverlays();
+                    var new_point = new BMap.Point(116.4267560000, 39.9030950000);
+                    var marker = new BMap.Marker(new_point);  // 创建标注
+                    map.addOverlay(marker);              // 将标注添加到地图中
+                    map.panTo(new_point);
+                </script>
+            </div>
+        </div>
+	</div>
+</body>
+<script src="../js/common.js"></script>
+</html>
+	

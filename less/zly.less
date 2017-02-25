@@ -2883,3 +2883,118 @@
         }
     }
 }
+.map-inut{
+    .input-wrap{
+        width: 10rem;
+        height: 34px;
+        line-height: 32px;
+        margin-top: 8px;
+        border: solid 1px #AFAFAF;
+        width: 100%;
+        border-radius: 5px;
+        i{
+            float: left;
+            width: 34px;
+            text-align: center;
+        }
+        input{
+            width: 80%;
+            float: left;
+            height: 32px;
+            line-height: 32px;
+            border: none;
+            outline: none;
+        }
+    }
+}
+.cur-location{
+    i{
+        height: 30px;
+        line-height: 38px;
+        font-size: 18px;
+        display: block;
+        text-align: center;
+    }
+    span{
+        height: 20px;
+        line-height: 10px;
+        display: block;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+.map-wrap{
+    width: 10rem;
+    height: 100%;
+    position: relative;
+    .shop-item{
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        background: rgba(0,0,0,.7);
+        z-index: 999;
+        .shop{
+            width: 100%;
+            padding: 8px 0px;
+            color: #FFF;
+            .detail{
+                width: 7rem;
+                float: left;
+                padding-left: 12px;
+                .name{
+                    font-weight: bold;
+                    height: 26px;
+                    line-height: 26px;
+                    .iconfont{
+                        float: left;
+                        width: 26px;
+                        height: 26px;
+                        position: relative;
+                        &:before{
+                            left: 0px;
+                            top: 0px;
+                            position: absolute;
+                        }
+                        em{
+                            width: 17px;
+                            height: 26px;
+                            position: absolute;
+                            color: #000;
+                            left: 0px;
+                            top: 0px;
+                            z-index: 9;
+                            text-align: center;
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+                .addr{
+                    height: 26px;
+                    line-height: 26px;
+                    padding-left: 26px;
+                }
+            }
+            .server{
+                width: 3rem;
+                float: right;
+                padding-right: 12px;
+                span{
+                    display: block;
+                    height: 26px;
+                    line-height: 26px;
+                    text-align: right;
+                }
+            }
+        }
+        .active{
+            background: #FD7744;
+        }
+    }
+    .location{
+        width: 100%;
+        height: 100%;
+    }
+}
