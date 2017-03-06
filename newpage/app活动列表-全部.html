@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>门店详情-活动</title>
+	<title>活动列表-全部</title>
 	<meta charset="utf-8">
 	<meta name="Keywords" content="#">
 	<meta name="description" content="#">
@@ -18,60 +18,30 @@
 <body class="main-contanier">
 	<div class="content-box">
         <div class="action-bar-wrap">
-            <div class="action-bar clearfix">
+            <div class="action-bar shucheng-action-bar clearfix">
                 <div class="left">
                     <a href="" class="back iconfont icon-jikediancanicon13-left"></a>
                 </div>
                 <div class="title">
                 	<label>新华书店（建筑书店）</label>
-                	<img src="../images/xiala-on.jpg" alt="" class="xiala xiala-on"/>
-                	<img src="../images/xiala-off.jpg" alt="" class="xiala xiala-off"/>
                 </div>
                 <div class="right">
-                	<a href="" class="search iconfont icon-dingwei"></a>
-                </div>
-            </div>
-            <div class="xiala-box">
-            	<ul>
-					<li>1.<span>新华书店东城店</span></li>
-					<li>2.<span>新华书店西城店</span></li>
-					<li>3.<span>新华书店天坛店</span></li>
-            	</ul>
+	                <a href="javascript:void(0)" class="search menu-toggle iconfont icon-fenlei"></a>
+	                <div class="menu-item">
+	                    <a href="" class="menu">购物首页</a>
+	                    <a href="" class="menu">商品分类</a>
+	                    <a href="" class="menu">购物车</a>
+	                    <a href="" class="menu">发给朋友圈</a>
+	                    <a href="" class="menu">分享到QQ空间</a>
+	                    <a href="" class="menu">复制链接</a>
+	                </div>
+	            </div>
             </div>
         </div>
 
         <div class="main-content">
             <div class="active-apply-box">
-                <div class="active-intro clearfix">
-                    <img src="../images/mdxx.jpg" class="cover">
-                    <div class="intro">
-                        <div class="mdxx-name">新华书店（建筑书店）</div>
-                        <div class="mdxx-div">
-                        	<span>营业时间：</span>
-                        	<label for="">9：00-18：00</label>
-                        </div>
-                        <div class="mdxx-div">
-                        	<span>提供服务：</span>
-                        	<label>
-                        		<img src="../images/tgfw.jpg"/>
-                        	</label>
-                        </div>
-                        <div class="mdxx-div">
-                        	<span>电话：</span>
-                        	<label for="">43695364<img src="../images/phone.jpg"/ style="margin-left: 6px;"></label>
-                        </div>
-                        <div class="mdxx-div">
-                        	<span>地址：</span>
-                        	<label for="">北京市海淀区增光路10号甘家口大厦</label>
-                        </div>
-                    </div>
-                </div>
                 <div class="md-list">
-                	<ul>
-                		<li>简介</li>
-                		<li>图书<i></i></li>
-                		<li class="active">活动<i></i></li>
-                	</ul>
                 	<div class="hd-box">
                 		<div class="hd-top">
 	                		<div class="hd-top-item" style="margin-right: 15%;">
@@ -82,17 +52,14 @@
 	                			<span>关注本省</span>
 	                			<img src="../images/xiala-on.jpg" alt="" />
 	                		</div>
-	                		<div class="hd-top-item" style="float: right;">
-	                			<span>全部</span>
-	                			<img src="../images/quanbuall.jpg" alt="" class="quanbuall"/>
-	                		</div>
                 		</div>
                 		<div class="active-intro clearfix">
                 			<a href="javascript:">
-				                <div  class="cover">
+	                			<div  class="cover">
 	                				<img src="../images/hd-list-img.jpg" class="cover-img">
 	                				<div class="hd-bottom">
 	                					<span class="jinxin">正在进行</span>
+	                					<i>详情》 </i>
 	                				</div>
 	                			</div>
                 			</a>
@@ -125,14 +92,15 @@
 			                </div>
 			            </div>
 			            <div class="active-intro clearfix">
-                			<a href="javascript:">
+			            	<a href="javascript:">
 				                <div  class="cover">
 	                				<img src="../images/hd-list-img.jpg" class="cover-img">
 	                				<div class="hd-bottom">
 	                					<span class="jieshu">已结束</span>
+	                					<i>详情》 </i>
 	                				</div>
 	                			</div>
-                			</a>
+	                		</a>
 			                <div class="intro">
 			                    <div class="mdxx-name">
 			                    	禅与生命
@@ -162,14 +130,15 @@
 			                </div>
 			            </div>
 			            <div class="active-intro clearfix">
-                			<a href="javascript:">
+			            	<a href="javascript:">
 				                <div  class="cover">
 	                				<img src="../images/hd-list-img.jpg" class="cover-img">
 	                				<div class="hd-bottom">
 	                					<span class="jinxin">正在进行</span>
+	                					<i>详情》 </i>
 	                				</div>
 	                			</div>
-                			</a>
+	                		</a>
 			                <div class="intro">
 			                    <div class="mdxx-name">
 			                    	禅与生命
@@ -204,34 +173,48 @@
         </div>
 	</div>
 </body>
+<script>
+    function CountDown(end, id) {
+        var EndTime= new Date(end);
+        var NowTime = new Date();
+        var t =EndTime.getTime() - NowTime.getTime();
+        var d=0;
+        var h=0;
+        var m=0;
+        var s=0;
+        if(t>=0){
+            d=Math.floor(t/1000/60/60/24);
+            h=Math.floor(t/1000/60/60%24);
+            m=Math.floor(t/1000/60%60);
+            s=Math.floor(t/1000%60);
+            if(h < 10) {
+                h = 0 + ''+ h;
+            }
+            if(m < 10) {
+                m = 0 + ''+ m;
+            }
+            if(s < 10) {
+                s = 0 + ''+ s;
+            }
+        }
+        $('#' + id).find('.h').text(h);
+        $('#' + id).find('.m').text(m);
+        $('#' + id).find('.s').text(s);
+    }
+
+    setInterval(function () {
+        CountDown('2017/8/12 00:00:00', 'countDownA')
+    },1000);
+    setInterval(function () {
+        CountDown('2017/8/12 00:00:00', 'countDownB')
+    },1000);
+
+    $('.menu-toggle').click(function () {
+        $('.right .menu-item').toggle();
+    })
+</script>
 <script src="../js/common.js"></script>
 <script type="text/javascript">
-	$('.xiala-box li').click(function(){
-		$('.xiala-box').hide();
-		$(this).find('.xiala-on').show();
-			$(this).find('.xiala-off').hide();
-	})
-	$('.title').click(function(){
-		if ($(this).hasClass('active')) {
-			$('.xiala-box').slideUp();
-			$(this).removeClass('active');
-			$(this).find('.xiala-on').show();
-			$(this).find('.xiala-off').hide();
-		} else{
-			$(this).find('.xiala-on').hide();
-			$(this).find('.xiala-off').show();
-			$('.xiala-box').slideDown();
-			$(this).addClass('active');
-		}
-	})
-	$('.xiala-box li').click(function(){
-		var text = $(this).find('span').text();
-		$('.title label').html(text);
-		$('.xiala-box').hide();
-		$('.xiala-on').show();
-		$('.xiala-off').hide();
-		$('.title').removeClass('active');
-	})
 
 </script>
 </html>

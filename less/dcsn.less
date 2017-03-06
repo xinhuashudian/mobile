@@ -85,7 +85,6 @@
     width: 10rem;
     ul{
         overflow: hidden;
-        margin-bottom: 16px;
         li{
             float: left;
             height: 55px;
@@ -115,6 +114,7 @@
         padding: 0 14px;
         width: 10rem;
         margin: 0px auto;
+        margin-top: 16px;
         .mdlist-img{
             overflow: hidden;
             zoom: 1;
@@ -139,6 +139,7 @@
     }
     .hd-box{
         width: 10rem;
+        margin-top: 16px;
         .hd-top{
             overflow: hidden;
             margin-bottom: 15px;
@@ -255,6 +256,54 @@
                 img{
                     width: 18px;
                     vertical-align: bottom;
+                }
+            }
+        } 
+    }
+}
+.gzsp{
+    .goods-info{
+        li{
+           padding: 10px 0 !important;
+            border-color:#f1f1f1 !important;
+            overflow: hidden;
+            .car{
+                width: inherit;
+            }
+            .img-wrap{
+                border: 1px solid #e3e3e3;
+                float: left;
+                position: static !important;
+                top: 0;
+                
+            }
+            .book-wrap{
+                h3{
+                    font-weight: normal;
+                    line-height: 18px !important;
+                }
+                p{
+                    line-height: 24px !important;
+                }
+            }
+            .btnGroup{
+                overflow: hidden;
+                a{
+                    display: block;
+                    float: right;
+                    padding: 4px 6px;
+                    border: 1px solid #666;
+                    border-radius: 4px;
+                    font-size: 12px;
+                    margin-left: 8px;
+                    img{
+                        width: 18px;
+                        vertical-align: bottom;
+                    }
+                }
+                .joinGWC{
+                    color: #FB6C22;
+                    border-color: #FB6C22;
                 }
             }
         } 
@@ -776,10 +825,155 @@
         }
     }
 }
-
-
-
-
+.cover{
+    position: relative;
+    .cover-img{
+        width: 100%;
+        height: 100%;
+    }
+    .hd-bottom{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url(../images/huodong-bottom.png) no-repeat;
+        z-index: 99;
+        width: 3.5rem;
+        height: 30px;
+        line-height: 30px;
+        max-width: 150px;
+        max-height: 30px;
+        overflow: hidden;
+        span{
+            display: block;
+            float: left;
+            margin-left: 6px;
+            font-size: 12px;
+        }
+        .jinxin{
+            color: #fff;
+        }
+        .jieshu{
+            color: #aaa9a9;
+        }
+        i{
+            display: block;
+            float: right;
+            color: #fff;
+            margin-right: 6px;
+            font-size: 12px;
+        }
+    }
+}
+.peisong{
+     width: 10rem;
+     background: #A3A49e;
+    .peisong-box{
+        width: 8.8rem;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 40px;
+        line-height: 40px;
+        background: #A3A49e;
+        span{
+            display: block;
+            float: left;
+            color: #cecece;
+        }
+        p{
+            float: left;
+            color: #fff;
+            margin-left: 20px;
+            line-height: 24px;
+            padding-left: 15px;
+            margin-top: 8px;
+            border-left: 1px solid #fff ;
+        }
+    }
+}
+.ztTime{
+    width: 9rem;
+    margin: 0 auto;
+    padding-top: 15px;
+    .form-group{
+        margin-bottom: 15px;
+        p{
+            color: #333333;
+            margin-bottom: 7px;
+        }
+        input{
+            width: 9rem;
+            height: 35px;
+            line-height: 35px;
+            padding: 0px 8px;
+            border: solid 1px #DFDFDF;
+            outline: none;
+            background: #f8f8f8;
+        }
+        .return-shipping-order {
+            .form-row{
+                height: 35px;
+                margin: initial !important;
+                .select{
+                    height: 35px;
+                }
+                &:before{
+                    width: 35px;
+                    line-height: 35px;
+                    height: 35px;
+                    content: none !important;
+                }
+            }
+        }
+    }
+}
+.cbs{
+    margin-top: 0 !important;
+    padding-bottom: 40px;
+    position: relative;
+    .cbs-search{
+        width: 10rem;
+        margin-top: 15px;
+        overflow: hidden;
+        padding: 0 14px;
+        .search-input{
+            position: relative;
+            height: 35px;
+            margin-right: 90px;
+            input{
+                width: 100%;
+                height: 33px;
+                padding-left: 30px;
+            }
+            .search {
+                position: absolute;
+                left: 10px;
+                top: 8px;
+            }
+        }
+        button{
+            width: 80px;
+            height: 35px;
+            line-height: 35px;
+            background: #fd7744;
+            border: none;
+            outline: none;
+            color: #FFFf;
+            color: #fff;
+            letter-spacing: 5px;
+            border-radius: 5px;
+             position: absolute;
+            right: 0.5rem;
+            top: 0;
+        }
+    }
+    .active-intro{
+        margin-bottom: 0 !important;
+    }
+    .cover{
+        height: 2.5rem !important;
+    }
+}
 
 
 
