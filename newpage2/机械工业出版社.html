@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>机械工业出版社</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="#">
+    <meta name="description" content="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="http://at.alicdn.com/t/font_hau0ump4g0gam7vi.css" type="text/css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body class="main-contanier">
+<div class="content-box">
+    <!--actionbar-->
+    <div class="action-bar-wrap">
+        <div class="action-bar clearfix">
+            <div class="left">
+                <a href="" class="back iconfont icon-jikediancanicon13-left"></a>
+            </div>
+            <div class="title">机械工业出版社</div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <!---->
+    <!--内容部分-->
+    <div class="main-content zzj">
+        <div class="publishing">
+            <div class="img-wrap">
+                <img src="../images/publishing.png" alt="" width="100%">
+            </div>
+            <div class="into">
+                机械工业出版社是国内知名信息出版内容提供商，经过62年的发展，特别是改革开放30年来的锐意进取，开拓创新，机械工业出版社已逐步形成了完整的信息采集、加工、传播和服务体系，产品涵盖图书、期刊、数据产品、音像制品、电子出版物，是集纸介媒体、视听媒体、网络媒体为一体，研究、出版、培训、印刷、发行、分销纵向一体化的行业领先的多领域、多学科、多媒体的大型综合性专业出版集团。
+            </div>
+            <ul class="nav-list">
+                <li><a>图书排行</a></li>
+                <li><a>新书预售</a></li>
+                <li><a>促销</a></li>
+            </ul>
+            <ul class="ranking-wrap">
+                <li class="ranking">
+                    <ul class="ranking-nav">
+                        <li class="cur">默认</li>
+                        <li>销售</li>
+                        <li>价格</li>
+                    </ul>
+                    <ul class="book-list">
+                        <li>
+                            <div class="img-wrap">
+                                <img src="../images/spjs.jpg" alt="">
+                            </div>
+                            <h3>书籍名字</h3>
+                            <p>作者名字</p>
+                            <div class="price">￥ <span>73元</span></div>
+                        </li>
+                        <li>
+                            <div class="img-wrap">
+                                <img src="../images/spjs.jpg" alt="">
+                            </div>
+                            <h3>书籍名字</h3>
+                            <p>作者名字</p>
+                            <div class="price">￥ <span>73元</span></div>
+                        </li>
+                        <li>
+                            <div class="img-wrap">
+                                <img src="../images/spjs.jpg" alt="">
+                            </div>
+                            <h3>书籍名字</h3>
+                            <p>作者名字</p>
+                            <div class="price">￥ <span>73元</span></div>
+                        </li>
+                        <li>
+                            <div class="img-wrap">
+                                <img src="../images/spjs.jpg" alt="">
+                            </div>
+                            <h3>书籍名字</h3>
+                            <p>作者名字</p>
+                            <div class="price">￥ <span>73元</span></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!---->
+</div>
+</body>
+<script src="../js/common.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".nav-list").on('click','li',function(){
+            $(this).addClass('cur').siblings().removeClass('cur');
+        })
+    })
+</script>
+</html>
