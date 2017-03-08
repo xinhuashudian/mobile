@@ -115,7 +115,14 @@
 <script src="../js/common.js"></script>
 <script>
     $(function(){
-
+        $(".cara-wrap").click(function(){
+            var showEle = '<div class="show-alert-wrap"><div>放入购物车成功</div></div>';
+            var bodyEle = $('body');
+            $(showEle).appendTo(bodyEle);
+            setTimeout(function(){
+                $('.show-alert-wrap').remove();
+            },3000)
+        })
     })
 </script>
 </html>

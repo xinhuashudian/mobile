@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>秒杀</title>
+    <title>推荐</title>
     <meta charset="utf-8">
     <meta name="Keywords" content="#">
     <meta name="description" content="#">
@@ -23,7 +23,7 @@
             <div class="left">
                 <a href="" class="back iconfont icon-jikediancanicon13-left"></a>
             </div>
-            <div class="title">秒杀</div>
+            <div class="title">推荐</div>
             <div class="right">
                 <a href="" class="iconfont leimu"></a>
             </div>
@@ -46,9 +46,11 @@
                     <div class="img-wrap">
                         <img src="../images/img-zzj-03.png" alt="" width="100%">
                     </div>
-                    <div class="timing" style="width: 96px">
+                    <div class="timing">
+                        <p>倒计时</p>
+                        <div class="time"><span>01</span>:<span>59</span>:<span>59</span></div>
                         <div class="btn-wrap">
-                            <button class="btn line-btn-danger">加入购物车</button>
+                            <button class="btn line-btn-danger">秒拍</button>
                         </div>
                     </div>
                     <div class="text">
@@ -61,9 +63,11 @@
                     <div class="img-wrap">
                         <img src="../images/img-zzj-03.png" alt="" width="100%">
                     </div>
-                    <div class="timing" style="width: 96px">
+                    <div class="timing">
+                        <p>倒计时</p>
+                        <div class="time"><span>01</span>:<span>59</span>:<span>59</span></div>
                         <div class="btn-wrap">
-                            <button class="btn line-btn-danger">加入购物车</button>
+                            <button class="btn line-btn-danger">秒拍</button>
                         </div>
                     </div>
                     <div class="text">
@@ -76,9 +80,11 @@
                     <div class="img-wrap">
                         <img src="../images/img-zzj-03.png" alt="" width="100%">
                     </div>
-                    <div class="timing" style="width: 96px">
+                    <div class="timing">
+                        <p>倒计时</p>
+                        <div class="time" id="timeCounter"><span>01</span>:<span>59</span>:<span>59</span></div>
                         <div class="btn-wrap">
-                            <button class="btn line-btn-danger">加入购物车</button>
+                            <button class="btn line-btn-danger">秒拍</button>
                         </div>
                     </div>
                     <div class="text">
@@ -95,12 +101,11 @@
 </body>
 <script src="../js/common.js"></script>
 <script>
-    $(document).ready(function(){
-        $(".right").click(function(){
-            $(".right-list-wrap").toggle();
-            return false;
-
-        })
+$(document).ready(function(){
+    $(".right").click(function(){
+        $(".right-list-wrap").toggle();
+        return false;
     })
+})
 </script>
 </html>

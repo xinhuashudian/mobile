@@ -32,28 +32,58 @@
     <div class="main-content zzj">
         <ul class="message-list">
             <li class="news">
-                <h3>最新活动消息</h3>
-                <p>少儿类书籍12月12日满100减15</p>
+                <div class="checked">
+                    <input type="checkbox"><i></i>
+                </div>
+                <a class="checked-des">
+                    <h3>最新活动消息</h3>
+                    <p>少儿类书籍12月12日满100减15</p>
+                </a>
             </li>
             <li class="email">
-                <h3>聊天消息</h3>
-                <p>点击查看您与客服的沟通记录</p>
+                <div class="checked">
+                    <input type="checkbox"><i></i>
+                </div>
+                <a class="checked-des">
+                    <h3>聊天消息</h3>
+                    <p>点击查看您与客服的沟通记录</p>
+                </a>
             </li>
             <li class="notice">
-                <h3>物流通知</h3>
-                <p>您的订单2139878989已经完成,感谢您对新华互联的信任</p>
+                <div class="checked">
+                    <input type="checkbox"><i></i>
+                </div>
+                <a class="checked-des">
+                    <h3>物流通知</h3>
+                    <p>您的订单2139878989已经完成,感谢您对新华互联的信任</p>
+                </a>
             </li>
             <li class="news">
-                <h3>最新活动消息</h3>
-                <p>少儿类书籍12月12日满100减15</p>
+                <div class="checked">
+                    <input type="checkbox"><i></i>
+                </div>
+                <a class="checked-des">
+                    <h3>最新活动消息</h3>
+                    <p>少儿类书籍12月12日满100减15</p>
+                </a>
             </li>
             <li class="email">
-                <h3>聊天消息</h3>
-                <p>点击查看您与客服的沟通记录</p>
+                <div class="checked">
+                    <input type="checkbox"><i></i>
+                </div>
+                <a class="checked-des">
+                    <h3>物流通知</h3>
+                    <p>您的订单2139878989已经完成,感谢您对新华互联的信任</p>
+                </a>
             </li>
             <li class="notice">
-                <h3>物流通知</h3>
-                <p>您的订单2139878989已经完成,感谢您对新华互联的信任</p>
+                <div class="checked">
+                    <input type="checkbox"><i></i>
+                </div>
+                <a class="checked-des">
+                    <h3>物流通知</h3>
+                    <p>您的订单2139878989已经完成,感谢您对新华互联的信任</p>
+                </a>
             </li>
         </ul>
     </div>
@@ -61,4 +91,19 @@
 </div>
 </body>
 <script src="../js/common.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".right").click(function(){
+            if($(".checked").is(':hidden')){
+                $(".checked").show();
+                $(".checked-des").css("margin-left",'40px');
+                return false;
+            }else{
+                $(".checked").hide();
+                $(".checked-des").css("margin-left",'0');
+                return false;
+            }
+        })
+    })
+</script>
 </html>
