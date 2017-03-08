@@ -50,27 +50,27 @@
         </div>
         <div class="search">
             <h3>热门搜索</h3>
-            <ul class="hot">
-                <li>接力</li>
-                <li>英语</li>
-                <li>语文阅读</li>
-                <li>小黑猫游记</li>
-                <li>接力</li>
-                <li>英语</li>
-                <li>语文阅读</li>
-                <li>小黑猫游记</li>
-            </ul>
+            <div class="hot">
+                <a>接力</a>
+                <a>英语</a>
+                <a>语文阅读</a>
+                <a>小黑猫游记</a>
+                <a>接力</a>
+                <a>英语</a>
+                <a>语文阅读</a>
+                <a>小黑猫游记</a>
+            </div>
             <h3>曾经看过或者购买过</h3>
-            <ul class="hot">
-                <li>接力</li>
-                <li>英语</li>
-                <li>语文阅读</li>
-                <li>小黑猫游记</li>
-                <li>接力</li>
-                <li>英语</li>
-                <li>语文阅读</li>
-                <li>小黑猫游记</li>
-            </ul>
+            <div class="hot">
+                <a>接力</a>
+                <a>英语</a>
+                <a>语文阅读</a>
+                <a>小黑猫游记</a>
+                <a>接力</a>
+                <a>英语</a>
+                <a>语文阅读</a>
+                <a>小黑猫游记</a>
+            </div>
         </div>
     </div>
     <!---->
@@ -78,6 +78,11 @@
 </body>
 <script src="../js/common.js"></script>
 <script>
-
+    $(document).ready(function(){
+        $(".right").click(function(){
+            $(".right-list-wrap").toggle();
+            return false;
+        })
+    })
 </script>
 </html>

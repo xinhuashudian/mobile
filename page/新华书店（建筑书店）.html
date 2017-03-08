@@ -63,7 +63,7 @@
                     <div class="timing">
                         <span>取消提醒</span>
                         <div class="btn-wrap">
-                            <button class="btn line-btn-gray">取消关注</button>
+                            <button class="btn line-btn-danger" data-id="0">关注</button>
                         </div>
                     </div>
                     <div class="text">
@@ -85,7 +85,7 @@
                     <div class="timing">
                         <span class="cur">提醒</span>
                         <div class="btn-wrap">
-                            <button class="btn line-btn-gray">取消关注</button>
+                            <button class="btn line-btn-danger" data-id="1">关注</button>
                         </div>
                     </div>
                     <div class="text">
@@ -107,7 +107,7 @@
                     <div class="timing">
                         <span>取消提醒</span>
                         <div class="btn-wrap">
-                            <button class="btn line-btn-gray">取消关注</button>
+                            <button class="btn line-btn-gray line-btn-danger" data-id="2">取消关注</button>
                         </div>
                     </div>
                     <div class="text">
@@ -122,10 +122,60 @@
         </div>
     </div>
     <!---->
+    <div class="show-alert-wrap cancel-attention" style="height:90px;display: none">
+        <div>确定要取消关注吗？</div>
+        <button class="btn line-btn-default sure">确定</button><button class="btn line-btn-default cancel">取消</button>
+    </div>
+    <div class="show-alert-wrap sure-attention" style="height:90px;display: none">
+        <div>确定要关注吗？</div>
+        <button class="btn line-btn-default sure">确定</button><button class="btn line-btn-default cancel">取消</button>
+    </div>
 </div>
 </body>
 <script src="../js/common.js"></script>
 <script>
+    $(document).ready(function(){
+        var attentionId = 0;
+        $(".right").click(function(){
+            $(".right-list-wrap").toggle();
+            return false;
+        })
+        $(".timing span").click(function(){
+            if($(this).hasClass('cur')){
+                $(this).removeClass('cur').text('取消提醒');
+            }else{
+                $(this).addClass('cur').text('提醒');
+            }
+        })
+        $(".timing button").click(function(){
+            attentionId = $(this).data('id');
+            if($(this).hasClass('line-btn-gray')){
+                $(".sure-attention").show();//关注提示框
+            }else{
+                $(".cancel-attention").show();//取消关注提示框
+            }
+        })
 
+        //取消操作
+        $(".show-alert-wrap .cancel").click(function(){
+            attentionId = 0;
+            $(this).parent().hide();
+            return false;
+        })
+
+        //确认取消关注
+        $(".cancel-attention .sure").click(function(){
+            $(".category li").eq(attentionId).find('.btn').addClass('line-btn-gray').text('取消关注');
+            $(this).parent().hide();
+            return false;
+        })
+
+        //确认关注
+        $(".sure-attention .sure").click(function(){
+            $(".category li").eq(attentionId).find('.btn').removeClass('line-btn-gray').text('关注');
+            $(this).parent().hide();
+            return false;
+        })
+    })
 </script>
 </html>

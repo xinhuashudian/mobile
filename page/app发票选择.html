@@ -33,50 +33,54 @@
     <div class="main-content zzj">
         <div class="bill">
             <div class="bill-choose">
-                <button class="btn line-btn-inverse">不需要发票</button>
+                <button class="btn line-btn-inverse line-btn-danger">不需要发票</button>
                 <button class="btn line-btn-danger">需要发票</button>
             </div>
-            <div class="bill-inner">
-                <p>发票抬头:</p>
-                <div>
-                    <select name="title" id="title">
-                        <option value="个人">个人</option>
-                        <option value="企业">企业</option>
-                    </select>
-                </div>
-                <div>
-                    <input type="text" placeholder="请填写">
-                </div>
+            <div class="choose-dec">
             </div>
-            <div class="bill-inner">
-                <p>发票类型:</p>
-                <div>
-                    <select name="title" id="title">
-                        <option value="普通增值税发票">普通增值税发票</option>
-                        <option value="普通增值税发票">普通增值税发票</option>
-                    </select>
+            <div class="choose-dec cur">
+                <div class="bill-inner">
+                    <p>发票抬头:</p>
+                    <div>
+                        <select name="title">
+                            <option value="个人">个人</option>
+                            <option value="企业">企业</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="请填写">
+                    </div>
                 </div>
-            </div>
-            <div class="bill-inner">
-                <p>发票介质:</p>
-                <div>
-                    <select name="title" id="title">
-                        <option value="电子">电子</option>
-                        <option value="电子">电子</option>
-                    </select>
+                <div class="bill-inner">
+                    <p>发票类型:</p>
+                    <div>
+                        <select name="title">
+                            <option value="普通增值税发票">普通增值税发票</option>
+                            <option value="普通增值税发票">普通增值税发票</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="bill-inner">
-                <p>发票内容:</p>
-                <div>
-                    <select name="title" id="title">
-                        <option value="图书">图书</option>
-                        <option value="图书">图书</option>
-                    </select>
+                <div class="bill-inner">
+                    <p>发票介质:</p>
+                    <div>
+                        <select name="title">
+                            <option value="电子">电子</option>
+                            <option value="电子">电子</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="btn-wrap">
-                <button class="btn btn-danger">提交</button>
+                <div class="bill-inner">
+                    <p>发票内容:</p>
+                    <div>
+                        <select name="title" id="title">
+                            <option value="图书">图书</option>
+                            <option value="图书">图书</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btn btn-danger">提交</button>
+                </div>
             </div>
         </div>
     </div>
@@ -84,4 +88,12 @@
 </div>
 </body>
 <script src="../js/common.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".btn").click(function(){
+            var index = $(this).removeClass('line-btn-inverse').siblings().addClass('line-btn-inverse').end().index();
+            $(".choose-dec").eq(index).addClass('cur').siblings().removeClass('cur');
+        })
+    })
+</script>
 </html>
