@@ -15,7 +15,7 @@
     <link href="http://at.alicdn.com/t/font_hau0ump4g0gam7vi.css" type="text/css" rel="stylesheet">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
-<body class="main-contanier">
+<body class="main-contanier"> 
 <div class="content-box">
     <!--actionbar-->
     <div class="action-bar-wrap">
@@ -55,24 +55,7 @@
                     </div>
                     <div class="timing">
                         <p>倒计时</p>
-                        <div class="time"><span>01</span>:<span>59</span>:<span>59</span></div>
-                        <div class="btn-wrap">
-                            <button class="btn line-btn-danger">秒拍</button>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <h3>安徒生童话</h3>
-                        <p>商品数量: 1290</p>
-                        <p class="price"><i>￥23</i>.50</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="img-wrap">
-                        <img src="../images/img-zzj-03.png" alt="" width="100%">
-                    </div>
-                    <div class="timing">
-                        <p>倒计时</p>
-                        <div class="time"><span>01</span>:<span>59</span>:<span>59</span></div>
+                        <div class="time" id="timeCounter"><span>01</span>:<span>59</span>:<span>59</span></div>
                         <div class="btn-wrap">
                             <button class="btn line-btn-danger">秒拍</button>
                         </div>
@@ -100,6 +83,23 @@
                         <p class="price"><i>￥23</i>.50</p>
                     </div>
                 </li>
+                <li>
+                    <div class="img-wrap">
+                        <img src="../images/img-zzj-03.png" alt="" width="100%">
+                    </div>
+                    <div class="timing">
+                        <p>倒计时</p>
+                        <div class="time" id="timeCounter"><span>2</span>:<span>00</span>:<span>00</span></div>
+                        <div class="btn-wrap">
+                            <button class="btn line-btn-danger">秒拍</button>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>安徒生童话</h3>
+                        <p>商品数量: 1290</p>
+                        <p class="price"><i>￥23</i>.50</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -114,5 +114,27 @@
             return false
         })
     })
+
+  function GetRTime(){
+    var EndTime= new Date('2017/03/10 1:00:00');
+    var NowTime = new Date();
+    var t =EndTime.getTime() - NowTime.getTime();
+    var d=0;
+    var h=0;
+    var m=0;
+    var s=0;
+    if(t>=0){
+      d=Math.floor(t/1000/60/60/24);
+      h=Math.floor(t/1000/60/60%24);
+      m=Math.floor(t/1000/60%60);
+      s=Math.floor(t/1000%60);
+    }
+
+    var obj = document.getElementById("timeCounter") 
+     obj.childNodes.item(0).innerText = h;
+     obj.childNodes.item(2).innerText = m;
+     obj.childNodes.item(4).innerText = s;
+  }
+  setInterval(GetRTime,0);
 </script>
 </html>

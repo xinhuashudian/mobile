@@ -2735,12 +2735,26 @@
             .book{
                 float: left;
                 width: 33%;
+                position: relative;
                 .cover{
                     display: block;
                     width: 85px;
                     height: 118px;
                     margin: 0px auto;
                     box-shadow: 1px 0px 4px rgba(0,0,0,.4);
+                }
+                .choose-right{
+                    position: absolute;
+                    top:-5px;
+                    right: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: url("../images/rightc.png") no-repeat;
+                    background-size:100%;
+                }
+                .choose-right-hover{
+                    background: url("../images/rightc-hover.png") no-repeat;
+                    background-size:100%;
                 }
                 .name{
                     display: block;

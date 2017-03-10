@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的图书馆-整理</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="#">
+    <meta name="description" content="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="http://at.alicdn.com/t/font_hau0ump4g0gam7vi.css" type="text/css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body class="main-contanier">
+<div class="content-box">
+    <div class="action-bar-wrap">
+        <div class="action-bar clearfix">
+            <div class="left">
+                <a href="" class="back iconfont icon-jikediancanicon13-left"></a>
+            </div>
+            <div class="title">我的图书馆-整理</div>
+            <div class="right">
+                <a href="" class="search iconfont icon-gengduo"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="library-box">
+            <div class="tab clearfix">
+                <a href="" class="active">电子书</a>
+                <a href="">纸质书</a>
+            </div>
+            <div class="nav clearfix">
+                <div class="nav-item">
+                    <a href="">综合</a>
+                    <a href="">录入时间</a>
+                    <a href="">书名</a>
+                    <a href="">作者</a>
+                </div>
+                <a href="" class="more iconfont icon-chanpinyuyue"></a>
+            </div>
+            <div class="book-item">
+                <div class="row clearfix">
+                    <a href="" class="book">
+                        <img src="../images/bookcover.jpg" class="cover">
+                        <div class="choose-right"></div>
+                        <span class="name">凳子有声音</span>
+                    </a>
+                    <a href="" class="book">
+                        <img src="../images/bookcover.jpg" class="cover">
+                        <div class="choose-right"></div>
+                        <span class="name">凳子有声音</span>
+                    </a>
+                    <a href="" class="book">
+                        <img src="../images/bookcover.jpg" class="cover">
+                        <div class="choose-right"></div>
+                        <span class="name">凳子有声音</span>
+                    </a>
+                </div>
+                <div class="row clearfix">
+                    <a href="" class="book">
+                        <img src="../images/bookcover.jpg" class="cover">
+                        <div class="choose-right choose-right-hover"></div>
+                        <span class="name">凳子有声音</span>
+                    </a>
+                    <a href="" class="add-book">
+                        <i class="icon">+</i>
+                        <span class="add">添加图书</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/common.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".choose-right").click(function(){
+            $(this).toggleClass('choose-right-hover');
+            return false;
+        })
+    })
+</script>
+</html>

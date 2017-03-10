@@ -1038,13 +1038,16 @@
     background: #f6f6f6;
     border-bottom: 1px solid #999;
     span{
-      display: inline-block;
-      width: 19%;
+      float:left;
+      width:20%;
       height: 30px;
       margin-top: 5px;
       line-height: 30px;
       text-align: center;
       border-right:1px solid #999;
+    }
+    span:last-child{
+      border-right:0;
     }
     span.cur{
       background: #e8e8e8;
