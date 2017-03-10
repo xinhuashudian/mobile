@@ -71,7 +71,12 @@
                 		<li class="active">
                 			<a href="app门店详情.html">简介</a>
                 		</li>
-                		<li>图书<i></i></li>
+                		<li>
+                			<a href="../newpage2/app门店详情-图书.html">
+                			图书
+                			</a>
+                			<i></i>
+                		</li>
                 		<li>
                 			<a href="app门店详情-活动.html">活动</a><i></i>
                 		</li>
@@ -160,11 +165,6 @@
 		$(this).find('.xiala-on').show();
 			$(this).find('.xiala-off').hide();
 	})
-	$(".md-list li").click(function(){
-		$(this).addClass("active").siblings().removeClass("active");
-		var _this =$(this).index();
-		$(".md-list-box").hide().eq(_this).show();
-	});
 	$('.title').click(function(){
 		if ($(this).hasClass('active')) {
 			$('.xiala-box').slideUp();
